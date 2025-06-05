@@ -1,4 +1,4 @@
-import { details } from "../assets/details";
+import { details } from "../../assets/details";
 import Card from "./Card";
 
 const Mastery = () => {

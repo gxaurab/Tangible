@@ -1,6 +1,6 @@
-import Header from "../components/Header";
-import PostPreview from "../components/PostReview";
-import Footer from "../components/Footer";
+import Header from "../components/Part1/Header";
+import PostPreview from "../components/Part1/PostReview";
+import Footer from "../components/Part1/Footer";
 import { posts } from "../assets/posts";
 
 const BlogLayout = () => {
