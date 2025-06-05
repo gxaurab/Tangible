@@ -6,13 +6,12 @@ import { useState } from "react"
 import lighton from '../../assets/pic_bulbon.gif'
 import lightoff from '../../assets/pic_bulboff.gif'
 
-
 const Awareness2 = () => {
 
   const [toggle, setToggle] = useState<boolean>(false)
 
-  const handleClick:any=()=>{
-    setToggle(!toggle)
+  const handleClick=()=>{
+    setToggle(prev => !prev)
   }
 
   return (
