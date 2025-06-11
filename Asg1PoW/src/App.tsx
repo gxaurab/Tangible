@@ -15,6 +15,12 @@ import Learning2 from "./components/Part2/Learning";
 
 import Learning from "./components/Part1/Learning";
 import Influence2 from "./components/Part2/Influence";
+import Awareness3 from "./components/Part3/Awareness";
+import {Application3}  from "./components/Part3/Application";
+import { Mastery3 } from "./components/Part3/Mastery";
+import { Influence3 } from "./components/Part3/Influence";
+import { Learning3 } from "./components/Part3/Learning";
+import Assignment3Layout from "./layouts/Assignment3Layout";
 
 function App() {
   return (
@@ -33,7 +39,15 @@ function App() {
           <Route path="application" element={<Application2 />} />
           <Route path="mastery" element={<Mastery2 />} />
           <Route path="influence" element={<Influence2 />} />
-          <Route path="learning" element={<Learning2 />} />
+          <Route path="learnings" element={<Learning2 />} />
+        </Route>
+
+        <Route path="ass3" element={<Assignment3Layout/>}>
+          <Route path="awareness" element={<Awareness3/>}/>
+          <Route path="application" element={<Application3/>}/>
+          <Route path="mastery" element={<Mastery3/>}/>
+          <Route path="influence" element={<Influence3/>}/>
+          <Route path="learnings" element= {<Learning3/>}/>
         </Route>
 
       </Route>
