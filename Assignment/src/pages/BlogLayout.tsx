@@ -14,7 +14,7 @@ const BlogLayout = () => {
         ))}
       </main>
 
-      <Footer copyright="Copyrights reserved 2025 HikeBud Gaurab" />
+      <Footer copyright=" 2025 HikeBud Gaurab" />
     </div>
   );
 };

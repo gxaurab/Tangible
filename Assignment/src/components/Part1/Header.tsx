@@ -5,7 +5,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   return (
-    <header className="text-center py-6 bg-blue-300">
+    <header className="text-center py-3 bg-blue-300">
       <h1 className="text-4xl font-semibold">{title}</h1>
       {subtitle && <p className="text-lg text-gray-700">{subtitle}</p>}
     </header>
