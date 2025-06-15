@@ -26,7 +26,7 @@ import { Learning3 } from "./components/Part3/Learning";
 import { Awareness4 } from "./components/Part4/Awareness4";
 import { Application4 } from "./components/Part4/Application4";
 import { Mastery4 } from "./components/Part4/Mastery4";
-import { Influnence4 } from "./components/Part4/Influnence4";
+import { Inf4 } from "./components/Part4/Inf4";
 import { Learning4 } from "./components/Part4/learning4";
 
 function App() {
@@ -61,7 +61,7 @@ function App() {
         <Route path="/ass4/awareness" element={<Awareness4 />} />
         <Route path="/ass4/application" element={<Application4 />} />
         <Route path="/ass4/mastery" element={<Mastery4 />} />
-        <Route path="/ass4/influence" element={<Influnence4 />} />
+        <Route path="/ass4/influence" element={<Inf4 />} />
         <Route path="/ass4/learnings" element={<Learning4 />} />
       </Routes>
     </>

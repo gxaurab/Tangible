@@ -8,10 +8,10 @@ const dataItem = [{
     name: "Gaurab",
     country: "Nepal"
     },
-{
-    name: "Trump",
-    country: "Israel"
-}]
+    {
+        name: "Trump",
+        country: "Israel"
+    }]
 
 
 export const Application4 = () => {
@@ -23,7 +23,8 @@ export const Application4 = () => {
         const time = setTimeout(()=>{
             setItems(dataItem)
             setLoading(false)
-        }, 6000)
+            console.log("Rendering ok")
+        }, 2000)
         return()=>{
             clearTimeout(time)
         }
