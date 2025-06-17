@@ -6,9 +6,10 @@ const assignments = [
   { id: "ass2", label: "Assignment 2" },
   { id: "ass3", label: "Assignment 3" },
   { id: "ass4", label: "Assignment 4" },
+  { id: "ass5", label: "Assignment 5" }
 ];
 
-const sections = ["awareness", "application", "mastery", "influence", "learnings"];
+const sections = ["awareness", "application", "mastery", "influence"];
 
 type Props = {
   currentAssignment: string;
