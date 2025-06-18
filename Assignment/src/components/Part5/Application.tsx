@@ -10,10 +10,11 @@ type FormValues  = {
 
 export const Application5 = () => {
 
-  const {register, handleSubmit,formState: {errors}} = useForm<FormValues >()
+  const {register, handleSubmit,formState: {errors}, reset} = useForm<FormValues >()
     
   const submit:SubmitHandler<FormValues >=(data)=>{
     console.log(data)
+    reset()
   }
 
   return (
