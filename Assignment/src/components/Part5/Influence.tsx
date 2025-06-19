@@ -51,32 +51,44 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <Input 
-          type={'text'} 
-          placeholder={"eg: Jhon Doe"}
-          name={'username'}
-          {...nameField}
-          />
+    <div className=" m-3 p-3 flex justify-center">
+      <form 
+        className="flex flex-col gap-3 bg-gray-100 p-3 shadow-2xl"
+        onSubmit={handleSubmit}>
+            <Input 
+              type={'text'} 
+              placeholder={"eg: Jhon Doe"}
+              name={'username'}
+              label={'Username:'}
+              isTextArea= {false}
 
-        <Input
-          name={'email'}
-          type={"email"}
-          placeholder={"jhondoe@gmail.com"}
-          {...emailField}
-          />
+              {...nameField}
+                />
 
-        <Input
-          name={'messsage'}
-          type={"text"}
-          placeholder={"Type some message here"}
-          {...messageField}
-          />
+            <Input
+              name={'email'}
+              type={"email"}
+              placeholder={"jhondoe@gmail.com"}
+              label={'Email:'}
+              isTextArea= {false}
 
-        <button type="submit">Submit</button>
-      </form>
-    </>
+              {...emailField}
+              />
+
+            <Input
+              name={'messsage'}
+              type={"text"}
+              placeholder={""}
+              label={'Leave a message:'}
+              isTextArea= {true}
+
+              {...messageField}
+              />
+
+            <button type="submit" 
+              className="bg-blue-500 rounded-3xl p-1 hover:bg-green-500">Submit</button>
+            </form>
+    </div>
   )
 }
 

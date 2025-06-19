@@ -23,11 +23,13 @@ const Mastery5 = () => {
 
 
   return (
-    <>
-    <h1> Welcome to the Validation logic implemented in this form</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="name">Name</label>
+    <div className=" flex flex-col items-center gap-4 p-5 m-2">
+    <h1 className="text-xl items-center"> Welcome to the Validation logic implemented in this form</h1>
+      <form onSubmit={handleSubmit(onSubmit)}
+        className="flex p-3 shadow-md bg-amber-50 flex-col gap-3 justify-center items-center ">
+        <label htmlFor="name">Name:</label>
         <input
+          className="w-sm border-b-1 border-b-zinc-400 "
           placeholder="eg. John Doe"
           {...register("name", {
             required: "Name is Mandatory"
@@ -37,6 +39,7 @@ const Mastery5 = () => {
 
         <label htmlFor="email">Email</label>
         <input
+          className="w-sm border-b-1 border-b-zinc-400"
           placeholder="eg. john@gmail.com"
           {...register("email", {
             required: "Email is a must",
@@ -49,6 +52,7 @@ const Mastery5 = () => {
 
         <label htmlFor="message">Message</label>
         <input
+          className="w-sm border-b-1 border-b-zinc-400 "
           placeholder="eg. Inquiry on smthng"
           {...register("message",{
             required: "Please input some message",
@@ -58,7 +62,7 @@ const Mastery5 = () => {
         
         {errors.message && <p className="text-red-400">{errors.message.message}</p>}
 
-        <button type="submit">Send</button>
+        <button className="bg-red-500 w-sm" type="submit">Send</button>
       </form>
 
       <div>
@@ -71,7 +75,7 @@ const Mastery5 = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

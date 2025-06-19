@@ -18,12 +18,13 @@ export const Application5 = () => {
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit(submit)}>
-
-        <label htmlFor="username">Username:</label>
+    <div className="flex justify-center p-4">
+      <form onSubmit={handleSubmit(submit)}
+        className="flex flex-col  m-3 p-4 shadow-md bg-cyan-100 gap-2 w-md ">
+        <label htmlFor="username" className="">Username:</label>
         <input 
           type="text"  
+          className="border-b-1"
           {...register("username", 
             {required: "username is required", maxLength: { value: 8, message: "Maximum length of 8 including @ symbol"},
               validate: (value)=>{
@@ -42,13 +43,15 @@ export const Application5 = () => {
         <input 
           type="password" 
           placeholder="your Password"
+          className="border-b-1 rounded-xls"
           {...register("password", {required: "Password is a must", minLength:{value: 8, message:"Min length of password is of 8 characters"}})}
           />
         {errors.password && <p className="text-red-500">{errors.password.message}</p>}
 
-        <button type="submit">Submit</button>
+        <button  className="bg-blue-400 hover:bg-green-400" type="submit">Submit</button>
+
 
       </form>
-    </>
+    </div>
   )
 }
