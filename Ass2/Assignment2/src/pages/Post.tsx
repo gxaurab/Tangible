@@ -1,4 +1,7 @@
+import { useContext } from "react"
 import { Link, Outlet } from "react-router-dom"
+import { ThemeContext } from "../context/ThemeContext"
+import ThemeToggler from "../Components/ThemeToggler"
 
 interface PostMock{
     id: string
@@ -8,24 +11,32 @@ interface PostMock{
 const postOverview:PostMock[] = [
     {
         id: '1',
-        Author: "Gaurab Wagle"
+        Author: "Item no 1"
     },
     {
         id: '2',
-        Author: "haurab whagle"
+        Author: "Item no 2 "
     }
 ]
 
+ 
 
 export const Post = () => {
+
+    const {theme} = useContext(ThemeContext)
+
   return (
-    <div className="min-h-screen">
+    <div className="content-center flex justify-center min-h-5 ">
+
         All posts options below
-        <ul className="border-2 w-fit m-5 shadow-2xl p-4 ">
+        <ul className= {theme === 'dark'?" bg-black text-white border-2 w-fit text-3xl m-5 shadow-2xl mt-40 p-4 ":"border-2 w-fit text-3xl m-5 shadow-2xl mt-40 p-4 "} >
             {postOverview.map((post, index)=>(
-                <Link to={post.id}><li className="text-red-800 hover:scale-110" key={index}>Post {post.id}:{post.Author}</li></Link>
+                <Link to={post.id}><li className=" hover:scale-110" key={index}>Post {post.id}:{post.Author}</li></Link>
             ))}
         </ul>
+
+        <ThemeToggler/>
+        
         <Outlet/>
     </div>
   )
