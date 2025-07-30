@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import Counter from './Components/Counter';
 import StepFoms from './Components/StepFoms';
 import TimerComponent from './Components/TimerComponent';
+import practiceUsereducer from './Components/practiceUsereducer';
 
 export const routes = createBrowserRouter([
   {
@@ -30,7 +31,8 @@ export const routes = createBrowserRouter([
       },
       {path: 'counter', Component:Counter },
       {path: 'useReducer', Component:StepFoms},
-      {path: 'influenceAssignment', Component:TimerComponent}
+      {path: 'influenceAssignment', Component:TimerComponent},
+      {path: '1', Component: practiceUsereducer}
     ],
   },
   { path: '*', element: <NotFound /> },
