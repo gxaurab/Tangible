@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className={theme === "dark" ? "bg-black text-white min-h-screen" : "bg-white text-black min-h-screen"}>
-      <Navbar />
+        <Navbar />
       <Outlet />
     </div>
   );

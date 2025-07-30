@@ -10,6 +10,7 @@ import { NotFound } from './pages/NotFound';
 import ProtectedRoute from './Components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Counter from './Components/Counter';
+import StepFoms from './Components/StepFoms';
 
 export const routes = createBrowserRouter([
   {
@@ -26,7 +27,8 @@ export const routes = createBrowserRouter([
         element: <ProtectedRoute />,
         children: [{ index: true, element: <Dashboard /> }],
       },
-      {path: 'counter', Component:Counter }
+      {path: 'counter', Component:Counter },
+      {path: 'useReducer', Component:StepFoms}
     ],
   },
   { path: '*', element: <NotFound /> },
