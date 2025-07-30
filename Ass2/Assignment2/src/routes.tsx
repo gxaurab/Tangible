@@ -11,6 +11,7 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import Counter from './Components/Counter';
 import StepFoms from './Components/StepFoms';
+import TimerComponent from './Components/TimerComponent';
 
 export const routes = createBrowserRouter([
   {
@@ -28,8 +29,10 @@ export const routes = createBrowserRouter([
         children: [{ index: true, element: <Dashboard /> }],
       },
       {path: 'counter', Component:Counter },
-      {path: 'useReducer', Component:StepFoms}
+      {path: 'useReducer', Component:StepFoms},
+      {path: 'influenceAssignment', Component:TimerComponent}
     ],
   },
   { path: '*', element: <NotFound /> },
+  
 ]);
