@@ -13,6 +13,11 @@ import Counter from './Components/Counter';
 import StepFoms from './Components/StepFoms';
 import TimerComponent from './Components/TimerComponent';
 import practiceUsereducer from './Components/practiceUsereducer';
+import Awareness from './Components/Awareness';
+import Tanstack from './Components/Tanstack';
+import { Application } from './Components/Application';
+import Influence from './Components/Influence';
+import LearningTanStack from './Components/LearningTanStack';
 
 export const routes = createBrowserRouter([
   {
@@ -32,9 +37,17 @@ export const routes = createBrowserRouter([
       {path: 'counter', Component:Counter },
       {path: 'useReducer', Component:StepFoms},
       {path: 'influenceAssignment', Component:TimerComponent},
-      {path: '1', Component: practiceUsereducer}
+      {path: '1', Component: practiceUsereducer},
+      {path: 'awareness', Component: Awareness},
+      {path: 'tanstackget', Component: Tanstack},
+      {path: 'application', Component: Application},
+      {path: 'influence', Component: Influence},
+      {path: 'learnings', Component: LearningTanStack}
+
+
     ],
   },
   { path: '*', element: <NotFound /> },
   
 ]);
+
